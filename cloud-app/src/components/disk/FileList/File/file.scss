@@ -1,0 +1,64 @@
+.file {
+    position: relative;
+    margin: 20px 0px;
+    padding: 0px 0px 3px 0px ;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    // &::after{
+    //         content:"";
+    //         display:block;
+    //         width:0%;
+    //         height:100%;
+    //         position: absolute;
+    //         top:0; 
+    //         right: 50%;
+    //         border-bottom:2px solid #5995fd;
+    //         transition:all .3s linear;
+    // }
+    // &::before{
+    //         content:"";
+    //         display:block;
+    //         width:0%;
+    //         height:100%;
+    //         position: absolute;
+    //         top:0; 
+    //         left: 50%;
+    //         border-bottom:2px solid #5995fd;
+    //         transition:all .3s linear;
+    // }
+    // &:hover:after { 
+    //     width:50%;
+    // }
+    // &:hover::before { 
+    //     width:50%;
+    // }
+   
+    &__image {
+        justify-content: center;
+    }
+
+    &__name {
+        overflow: hidden;
+    }
+
+    &__date {
+        grid-column-start: 5;
+        justify-content: center;
+    }
+
+    &__size {
+        grid-column-start: 6;
+        justify-content: center;
+    }
+
+    &__download { 
+        grid-column-start: 3;
+    }
+    &__delete { 
+        cursor: pointer;
+        grid-column-start: 4;
+    }
+  
+}
+

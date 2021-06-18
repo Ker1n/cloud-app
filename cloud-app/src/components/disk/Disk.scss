@@ -1,0 +1,63 @@
+
+
+.disk {
+    font-family: "Poppins", sans-serif;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    &__header {
+
+    }
+
+    &__row { 
+        display: flex;
+    }
+
+    &__back {
+        cursor: pointer;
+        margin: 0px 15px;
+    }   
+
+
+    &__create {
+        cursor: pointer;
+        margin: 0px 15px;
+    }
+
+    &__back img { 
+        width: 30px;
+        height: 30px;
+    }
+
+    &__create img { 
+        width: 50px;
+        height: 50px;
+    }
+
+    &__upload {
+        margin-top: 15px;
+    }
+
+    &__upload-label {
+        
+        padding: 5px;
+        cursor: pointer;
+        border: 2px dashed red;
+    }
+
+    &__upload-input {
+        display: none;
+    }
+}
+
+
+.drop-area { 
+    width: 100%;
+    height: calc(100vh - 70px - 40px);
+    margin: 20px 0px ;
+    border: dashed red 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}

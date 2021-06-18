@@ -1,0 +1,19 @@
+.fileList {
+    margin: 20px 0px;
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr  1fr 2fr 1fr;   
+     }
+
+    &__name {
+        grid-column-start: 2;
+    }
+
+    &__date {
+        grid-column-start: 5;
+    }
+
+    &__size {
+        grid-column-start: 6;
+    }
+}
