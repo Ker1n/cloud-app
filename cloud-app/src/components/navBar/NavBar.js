@@ -2,20 +2,27 @@ import React from "react";
 import "./navBar.scss";
 import { useDispatch, useSelector } from 'react-redux'
 import { logoutUser } from '../../redux/reducers/userReducer';
+import { NavLink } from 'react-router-dom'
+
 
 import Logo from "../../assets/img/navBar/cloudLogo.png";
 import { getFiles, searchFiles } from "../../redux/actions/file";
 import {  showLoader } from "../../redux/reducers/appReducer";
 
+import { API_URL } from "../../config";
+
+import defaultAvatar from '../../assets/img/navBar/Vector.png';
+
 export const NavBar = () => {
 
-  const {currentDir} = useSelector(state =>  state.files)
+  const {currentDir} = useSelector(state =>  state.files);
+  const {currentUser} = useSelector(state => state.user)
   const [search, setSearch] = React.useState("");
   const [searchTimeout, setSearchTimeout] = React.useState(false);
-
+  const avatar = currentUser.avatar ? `${API_URL + currentUser.avatar}` : defaultAvatar;
   const dispatch = useDispatch();
 
-  
+
   const searchChangeHandler = (event) => { 
       setSearch(event.target.value);
       if(searchTimeout !== false) {
@@ -51,6 +58,13 @@ export const NavBar = () => {
                 onChange={searchChangeHandler}
               />
             </div>
+            <NavLink to='/profile'>
+            <div className="user__avatar">
+           
+                 <img src={avatar} alt="user" />
+            
+            </div>
+            </NavLink>
             <div className="navbar__signIn" onClick={() => dispatch(logoutUser())}>logout</div>
           </div>
         </div>

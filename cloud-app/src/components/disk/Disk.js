@@ -15,6 +15,7 @@ import {
   setCurrentDir,
   setPopupDisplay,
 } from "../../redux/reducers/fileReducer";
+import { setFilesView } from "../../redux/reducers/appReducer";
 
 export const Disk = () => {
 
@@ -82,11 +83,17 @@ export const Disk = () => {
             <label htmlFor="disk__upload" className="disk__upload-label">upload file</label>
             <input multiple={true} onChange={fileUploadHandler} type="file" id="disk__upload" className="disk__upload-input" />
           </div>
+          <div className='disk__select-sort'>
           <select value={sort} onChange={(e) => setSort(e.target.value)} className='disk_select' >
             <option value="name">Sort by name</option>
             <option value="type">Sort by type</option>
             <option value="date">Sort by date</option>
           </select>
+          </div>
+          <div className="disk__select-list">
+            <button className="disk__plate" onClick={()=>dispatch(setFilesView('plate'))}></button>
+            <button className="disk__list" onClick={()=>dispatch(setFilesView('list'))}></button>
+          </div>
         </div>
 
       </div>

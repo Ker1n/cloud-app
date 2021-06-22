@@ -1,10 +1,12 @@
 const SHOW_LOADER = "SHOW_LOADER";
 const HIDE_LOADER = "HIDE_LOADER";
+const SET_VIEW = "SET_VIEW";
 
 
 
 const initialState = { 
-    loader: false
+    loader: false,
+    view: 'list'
 };
 
 
@@ -21,7 +23,12 @@ export default function appReducer (state = initialState, action) {
                 ...state,
                 loader: false
             }    
-    
+        case SET_VIEW: 
+            return { 
+                ...state, 
+                view: action.payload
+            }
+
         default:
             return state
     }
@@ -29,4 +36,4 @@ export default function appReducer (state = initialState, action) {
 
 export const showLoader = () => ({type:SHOW_LOADER});
 export const hideLoader = () => ({type:HIDE_LOADER});
-
+export const setFilesView = (payload) => ({type:SET_VIEW, payload})

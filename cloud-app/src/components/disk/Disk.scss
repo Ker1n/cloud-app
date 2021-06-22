@@ -48,6 +48,29 @@
     &__upload-input {
         display: none;
     }
+
+
+    &__select-list{
+
+    }
+    
+    &__plate, &__list { 
+        height: 20px;
+        width: 20px;
+        margin: 0px 10px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: no-repeat center center;
+        background-size: contain;
+    }
+    &__plate{
+        background-image: url("../../assets/img/disk/3.svg");
+    }
+    &__list{
+        background-image: url("../../assets/img/disk/2.svg");
+    }
+
 }
 
 

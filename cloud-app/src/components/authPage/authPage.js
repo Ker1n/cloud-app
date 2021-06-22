@@ -39,6 +39,7 @@ export const AuthPage = () => {
   }
 
   const completeLogin = () => { 
+  
     dispatch(login(emailAuthorization, passwordAuthorization));
     setEmailAuthorization("");
     setPasswordAuthorization("");

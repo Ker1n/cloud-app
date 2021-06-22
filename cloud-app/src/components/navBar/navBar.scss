@@ -52,3 +52,12 @@
         color: #444;
     }
 }
+
+
+.user__avatar img { 
+    z-index: 1000;
+    margin: 0 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}

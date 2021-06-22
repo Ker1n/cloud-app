@@ -22,7 +22,6 @@ const validatorArray = [
 
 router.post("/registration", validatorArray, async (req, res) => {
   try {
-    console.log(req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ message: "Incorrect request", errors });
@@ -52,7 +51,6 @@ router.post("/registration", validatorArray, async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log(email, "____", password)
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: "User not found" });

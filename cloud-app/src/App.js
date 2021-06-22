@@ -7,6 +7,7 @@ import { NavBar } from './components/navBar/NavBar';
 import { AuthPage } from './components/authPage/authPage';
 import {auth} from './redux/actions/user'
 import { Disk } from './components/disk/Disk';
+import { Profile } from './components/Profile/Profile';
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
       <NavBar />  
       <Switch>
           <div className="content">
-          <Route path="/" component={Disk} />
+          <Route path="/" render={()=><Disk />} />
+          <Route path="/profile" component={Profile} />
           </div>
           <Redirect to="/" />
         </Switch>  
