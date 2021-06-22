@@ -1,6 +1,5 @@
-import { SET_USER, USER_LOGOUT } from '../types/types';
-
-
+export const SET_USER = "SET_USER";
+export const USER_LOGOUT = "USER_LOGOUT";
 
 const initialState = {
     currentUser: {},
