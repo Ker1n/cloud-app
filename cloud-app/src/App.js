@@ -1,13 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 
 import {useSelector, useDispatch} from 'react-redux';
 
-import { NavBar } from './components/navBar/NavBar';
-import { AuthPage } from './components/authPage/authPage';
 import {auth} from './redux/actions/user'
 import { Disk } from './components/disk/Disk';
 import { Profile } from './components/Profile/Profile';
+
+import {Login} from "./components/Auth/Login/Login";
+import {Registration} from './components/Auth/Registration/Registration'
+
 
 function App() {
 
@@ -19,29 +21,30 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
-    <div className="App">
-    {
-      !isAuth ? 
-      <Switch>
-        <Route  path="/" component={AuthPage} />
-        <Redirect to="/" />
-      </Switch>
-      : 
-      <div className="main">
-      <NavBar />  
-      <Switch>
-          <div className="content">
-          <Route path="/" render={()=><Disk />} />
-          <Route path="/profile" component={Profile} />
+      <Router>
+        <div className="app">
+          {/* <NavBar />  */}
+          <div className="app__wrapper">
+              {!isAuth ? 
+                <Switch> 
+                  <Route path="/login" component={Login} />
+                  <Route path="/registration" component={Registration} />
+                  <Redirect to='/login' />
+                </Switch>
+                : 
+                <Switch>
+                  <Route exact path="/" component={Disk} />
+                  <Route exact path="/profile" component={Profile} />
+                  <Redirect to="/" />
+                </Switch>            
+              }
           </div>
-          <Redirect to="/" />
-        </Switch>  
-      </div>
-    }
-    </div>
-    </BrowserRouter>
-  );
-}
+        </div>
+      </Router>
+    );
+  }
 
 export default App;
+
+
+

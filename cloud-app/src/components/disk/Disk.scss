@@ -1,9 +1,91 @@
-
-
 .disk {
     font-family: "Poppins", sans-serif;
-    max-width: 1140px;
-    margin: 0 auto;
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        padding:  10px 0px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.705);
+    }
+}
+.disk-header {
+
+    &__right-row {
+        display: flex;
+    }
+
+    &__left-row {
+        display: flex;
+    }
+}
+.right-row {
+    
+    &__arrow-back {
+    }
+
+    &__arrow-forward {
+    }
+
+    &__new-folder {
+    }
+}
+.left-row {
+
+    &__select-sort {
+        
+    }
+
+    &__select-table {
+    }
+}
+.select-table {
+    &__plate, &__list{ 
+        height: 20px;
+        width: 20px;
+        margin: 0px 10px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: no-repeat center center;
+        background-size: contain;
+    }
+    &__plate {
+        background-image: url("../../assets/img/disk/3.svg");
+    }
+
+    &__list {
+        background-image: url("../../assets/img/disk/2.svg");
+    }
+}
+// &__plate, &__list { 
+//     height: 20px;
+//     width: 20px;
+//     margin: 0px 10px;
+//     outline: none;
+//     border: none;
+//     cursor: pointer;
+//     background: no-repeat center center;
+//     background-size: contain;
+// }
+// &__plate{
+//     background-image: url("../../assets/img/disk/3.svg");
+// }
+// &__list{
+//     background-image: url("../../assets/img/disk/2.svg");
+// }
+
+.disk {
+  
+  
 
     &__header {
 

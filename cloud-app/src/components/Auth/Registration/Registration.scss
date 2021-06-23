@@ -1,0 +1,90 @@
+.registration {
+  
+
+  &__animation-block {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    width: 520px;
+    height: 520px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 36px;
+    span {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+    margin-bottom: 50px;
+  }
+
+  &__email {
+    margin: 20px 0px;
+  }
+
+  &__password {
+    margin: 20px 0px;
+  }
+
+  &__login {
+    margin: 15px 0px;
+    align-self: flex-start;
+    padding-left: 40px;
+    a {
+      text-decoration: none;
+      color: rgb(190, 192, 194);
+      transition: all 0.5s ease 0s;
+    }
+    a:hover {
+      color: #f56837;
+    }
+  }
+
+  &__btn {
+    margin: 20px 0px;
+  }
+}
+
+.btn__registration {
+  color: rgb(190, 192, 194);
+  font-size: 1.6rem;
+  padding: 6.7px 40px;
+  background: #bd4e29;
+  border-radius: 12px;
+  transition: all 0.5s ease 0s;
+  &:hover {
+    background: #f56837;
+  }
+}
+.registration__transition-enter-active { 
+  animation: registration__transition-enter 500ms forwards;
+ 
+}
+
+@keyframes registration__transition-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
