@@ -9,9 +9,11 @@
    
     &__image {
         justify-content: center;
+        cursor: pointer;
     }
 
     &__name {
+        cursor: pointer;
         overflow: hidden;
     }
 
@@ -47,6 +49,45 @@
         text-align: start;
         grid-column-start: 7;
     }
-    
+    &:hover { 
+        transition: 0.5s ease;
+        background-color: rgba($color: #212d45, $alpha: 0.5);
+    }
 }
 
+.file-plate {
+    flex: 0 0 120px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+ 
+    max-width: 100px;
+    margin: 0px 30px;
+    &__image {
+        height: 80px;
+        width: 80px;
+        cursor: pointer;
+    }
+
+    &__name {
+        
+      width: 100px !important;
+       
+    }
+    &__buttons-row{
+        display: flex;
+        justify-content: space-between ;
+        height: 50px;
+    }
+    &__download, &__delete, &__config i { 
+        cursor: pointer;
+        font-size: 22px;
+        &:hover { 
+            transition: 0.5s ease;
+            color: #f56837;
+        }
+    }
+    &__delete { 
+        margin: 0px 15px;
+    }
+}

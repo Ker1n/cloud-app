@@ -34,7 +34,7 @@ export const FileList = () => {
                         {files.map(file => (
                             <CSSTransition
                              key={file._id} 
-                             timeout={2500}
+                             timeout={1000}
                              classNames={'file'}
                              >
                                 <File file={file}  />
@@ -49,12 +49,11 @@ export const FileList = () => {
     if (view === 'plate') { 
         return ( 
             <div className="files-plates__wrapper">
-            <h1>PLATE</h1>
             <TransitionGroup>
                 {files.map(file => (
                     <CSSTransition
                      key={file._id} 
-                     timeout={2500}
+                     timeout={1000}
                      classNames={'file-plate'}
                      >
                         <File file={file}  />

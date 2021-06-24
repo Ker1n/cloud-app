@@ -19,8 +19,11 @@
         grid-column-start: 4;
     }
 }
-
-
+  .files-plates__wrapper div { 
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 
 .file-enter-active {
@@ -52,12 +55,6 @@
       opacity: 0;
       transform: translateY(-50%);
     }
-  }
-
-
-  .files-plates__wrapper { 
-    display: flex;
-    
   }
 
   
