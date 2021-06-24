@@ -12,7 +12,6 @@ export const FileList = () => {
     const {files} = useSelector(state => state.files)
     const {view} = useSelector(state => state.app);
 
-    
 
     if(files.length === 0) {  
         return ( 

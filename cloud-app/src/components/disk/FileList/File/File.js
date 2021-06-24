@@ -42,11 +42,14 @@ export const File = ({file}) => {
             <div className="file__date">{moment(file.date).format('MMMM Do YYYY h:mm a')}</div>
             <div className="file__size">{sizeFormat(file.size)}</div>
             {(file.type !== 'dir') ? 
-            <div className="file__download">
-                <button className="file_btn-download" onClick={downloadFileHandler}>Download</button>
+            <div className="file__download"  onClick={downloadFileHandler}>
+              <i class="fas fa-download"></i>
             </div> : null}
-            <div className="file__delete">
-                <button className="file_btn-delete" onClick={deleteClickHandler} >Delete</button>
+            <div className="file__delete" onClick={deleteClickHandler} >
+                 <i class="fas fa-trash-alt"></i>
+            </div>
+            <div className="file__config">
+               <i class="fas fa-cogs"></i>
             </div>
         </div>
     )

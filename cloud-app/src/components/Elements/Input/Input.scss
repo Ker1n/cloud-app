@@ -9,11 +9,10 @@ h2 small {
   display:block; 
 }
 
-
 .group__wrapper 	 { 
   position:relative; 
 }
-input {
+.group__wrapper input {
   background-color: rgb(33, 45, 69);
   color: rgb(190, 192, 194);
   font-size:18px;
@@ -23,9 +22,9 @@ input {
   border:none;
   border-radius: 12px;
 }
-input:focus { outline:none; }
+.group__wrapper input:focus { outline:none; }
 
-label {
+.group__wrapper label {
   color:#999; 
   font-size:18px;
   font-weight:normal;
@@ -39,7 +38,7 @@ label {
   
 }
 
-input:focus ~ label, input:valid ~ label {
+.group__wrapper input:focus ~ label, input:valid ~ label {
   top:-20px;
   font-size:14px;
   color:#f56837;

@@ -16,8 +16,8 @@
  
 
     &__content {
-        width: 400px;
-        background: white;
+        width: 420px;
+        background: #212d45;
         padding: 25px;
         border-radius: 10px;
         display: flex;
@@ -29,28 +29,23 @@
         justify-content: space-between;
     }
     input {
-       margin: 20px 0px;
+        margin-top: 30px;
+       background-color: rgb(15, 22, 36);
     }
 
     &__title {
-        margin-left: 10px;
-        width: 50px;
-        height: 50px;
-        background-color:  rgba(51, 51, 51, 0.699);
-        -webkit-mask: url("../../../assets/img/disk/file-signature-solid.svg") no-repeat center;
-        mask: url("../../../assets/img/disk/file-signature-solid.svg") no-repeat center;
+        font-size: 46px;
+        color: rgb(15, 22, 36);
     }
 
     &__close {
         cursor: pointer;
-        width: 30px;
-        height: 30px;
-        background-color:  #5995fd;
-        -webkit-mask: url("../../../assets/img/disk/exit.svg") no-repeat center;
-        mask: url("../../../assets/img/disk/exit.svg") no-repeat center;
-        &:hover { 
-            background-color: #4d84e2;
-        }
+        font-size: 26px;
+        color: rgb(15, 22, 36);
+        &:hover {
+            transition: 0.5s ease;
+            color: #f56837;
+          }
     }
 
 
@@ -58,19 +53,19 @@
     &__createFolder {
         align-self: flex-end;
         width: 150px;
-        background-color: #5995fd;
+        background-color: #bd4e29;
         border: none;
         outline: none;
         height: 49px;
-        border-radius: 49px;
+        border-radius: 12px;
         color: #fff;
         text-transform: uppercase;
         font-weight: 600;
-        margin: 10px 0;
+        margin: 25px 0 10px ;
         cursor: pointer;
         transition: 0.5s;
         &:hover {
-            background-color: #4d84e2;
+            background-color: #f56837;
         }
     }
 
@@ -94,3 +89,20 @@
           }
     }
 }
+
+
+
+  .popupPage-enter-active {
+    animation: popupPage-enter 500ms forwards;
+  }
+  
+  @keyframes popupPage-enter {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

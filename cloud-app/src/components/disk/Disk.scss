@@ -1,168 +1,171 @@
 .disk {
-    font-family: "Poppins", sans-serif;
-    &__container {
-        max-width: 1140px;
-        margin: 0 auto;
-    }
-
-    &__wrapper {
-
-    }
-
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-self: center;
-        padding:  10px 0px;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.705);
-    }
+  font-family: "Poppins", sans-serif;
+  &__container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  &__header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.705);
+    border-top: 1px solid rgba(128, 128, 128, 0.705);
+  }
+  &__upload-input {
+    display: none;
+  }
 }
 .disk-header {
+  &__right-row {
+    display: flex;
+  }
 
-    &__right-row {
-        display: flex;
-    }
-
-    &__left-row {
-        display: flex;
-    }
-}
-.right-row {
-    
-    &__arrow-back {
-    }
-
-    &__arrow-forward {
-    }
-
-    &__new-folder {
-    }
-}
-.left-row {
-
-    &__select-sort {
-        
-    }
-
-    &__select-table {
-    }
-}
-.select-table {
-    &__plate, &__list{ 
-        height: 20px;
-        width: 20px;
-        margin: 0px 10px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        background: no-repeat center center;
-        background-size: contain;
-    }
-    &__plate {
-        background-image: url("../../assets/img/disk/3.svg");
-    }
-
-    &__list {
-        background-image: url("../../assets/img/disk/2.svg");
-    }
-}
-// &__plate, &__list { 
-//     height: 20px;
-//     width: 20px;
-//     margin: 0px 10px;
-//     outline: none;
-//     border: none;
-//     cursor: pointer;
-//     background: no-repeat center center;
-//     background-size: contain;
-// }
-// &__plate{
-//     background-image: url("../../assets/img/disk/3.svg");
-// }
-// &__list{
-//     background-image: url("../../assets/img/disk/2.svg");
-// }
-
-.disk {
-  
-  
-
-    &__header {
-
-    }
-
-    &__row { 
-        display: flex;
-    }
-
-    &__back {
-        cursor: pointer;
-        margin: 0px 15px;
-    }   
-
-
-    &__create {
-        cursor: pointer;
-        margin: 0px 15px;
-    }
-
-    &__back img { 
-        width: 30px;
-        height: 30px;
-    }
-
-    &__create img { 
-        width: 50px;
-        height: 50px;
-    }
-
-    &__upload {
-        margin-top: 15px;
-    }
-
-    &__upload-label {
-        
-        padding: 5px;
-        cursor: pointer;
-        border: 2px dashed red;
-    }
-
-    &__upload-input {
-        display: none;
-    }
-
-
-    &__select-list{
-
-    }
-    
-    &__plate, &__list { 
-        height: 20px;
-        width: 20px;
-        margin: 0px 10px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        background: no-repeat center center;
-        background-size: contain;
-    }
-    &__plate{
-        background-image: url("../../assets/img/disk/3.svg");
-    }
-    &__list{
-        background-image: url("../../assets/img/disk/2.svg");
-    }
-
-}
-
-
-.drop-area { 
-    width: 100%;
-    height: calc(100vh - 70px - 40px);
-    margin: 20px 0px ;
-    border: dashed red 2px;
+  &__left-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    flex-direction: row;
+  }
+}
+.right-row {
+  &__arrow-back {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 30px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
+    }
+  }
+
+  &__arrow-forward {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 30px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
+    }
+  }
+
+  &__new-folder {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 30px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
+    }
+  }
+  &__upload-file label{ 
+    cursor: pointer;
+    font-size: 30px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
+    }
+  }
+}
+.left-row {
+
+  &__select-table {
+    display: flex;
+    font-size: 26px;
+  }
+}
+.select-table {
+  &__plate {
+    cursor: pointer;
+    margin: 0px 20px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
+    }
+  }
+  &__list{ 
+    cursor: pointer;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
+    }
+  }
+}
+.disk-body__bg-animation {
+  position: absolute;
+  bottom: 60px;
+  right: 50px;
+  width: 520px;
+  height: 520px;
+  z-index: 50;
+}
+
+.drop-area {
+  width: 100%;
+  height: calc(100vh - 250px);
+  margin: 20px 0px;
+  border: dashed #f56837 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  flex-direction: column;
+  p{
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.custom-select {
+  background-color: #212d45;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.custom-select::-ms-expand {
+  display: none;
+}
+
+.custom-select {
+  transition: 0.5 ease;
+  padding: 5px 20px 5px 8px;
+  border: none;
+  border-radius: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23333' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 9px;
+  color:  rgb(190, 192, 194);;
+}
+.custom-select option { 
+  background-color: #212d45;
+}
+
+
+.custom-select:hover {
+  border-color: #999;
+  box-shadow: 0 0 1px 2px #f56837;
+  outline: none;
+}
+
+.custom-select:disabled,
+.custom-select[aria-disabled="true"] {
+  cursor: not-allowed;
+  background-color: yellow;
+}
+
+.custom-select:disabled:hover,
+.custom-select[aria-disabled="true"]:hover {
+  border-color: #999;
 }

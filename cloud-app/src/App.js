@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import {useSelector, useDispatch} from 'react-redux';
 
-import {auth} from './redux/actions/user'
+import { auth } from './redux/actions/user'
 import { Disk } from './components/disk/Disk';
 import { Profile } from './components/Profile/Profile';
 
@@ -13,17 +13,33 @@ import {Registration} from './components/Auth/Registration/Registration'
 
 
 
-const AnimatedSwitch = withRouter(({ location }) => (
+const AnimatedSwitchAuth = withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition key={location.key} classNames="authPages" timeout={1000} exit={false} unmountOnExit={true}>
       <Switch>
-      <Route path="/login" component={Login} />
-      <Route path="/registration" component={Registration} />
-      <Redirect to='/login' />
+        <Route path="/login" component={Login} />
+        <Route path="/registration" component={Registration} />
+        <Redirect to='/login' />
       </Switch>
     </CSSTransition>
   </TransitionGroup>
 ));
+
+
+const AnimatedSwitchDisk = withRouter(({ location }) => (
+  <TransitionGroup>
+    <CSSTransition key={location.key} classNames="diskPage" timeout={1000} exit={false} unmountOnExit={true}>
+      <Switch>
+        <Route exact path="/" component={Disk} />
+        <Route exact path="/profile" component={Profile} />
+        <Redirect to="/" />
+      </Switch>    
+    </CSSTransition>
+  </TransitionGroup>
+));
+
+
+
 
 
 function App() {
@@ -33,23 +49,16 @@ function App() {
 
   React.useEffect(() => {
     dispatch(auth())
-  }, [])
+  }, []);
 
   return (
       <Router>
         <div className="app">
-          {/* <NavBar />  */}
-          <div className="app__wrapper">
               {!isAuth ? 
-              <AnimatedSwitch />
+              <AnimatedSwitchAuth />
                 : 
-                <Switch>
-                  <Route exact path="/" component={Disk} />
-                  <Route exact path="/profile" component={Profile} />
-                  <Redirect to="/" />
-                </Switch>            
+              <AnimatedSwitchDisk /> 
               }
-          </div>
         </div>
       </Router>
     );

@@ -1,63 +1,120 @@
-
-
-
 .navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 70px;
-    background-color: #5995fd;
-    font-family: "Poppins", sans-serif;
+  height: 75px;
+  font-size: 26px;
+  color: #fff;
+
+  &__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  &__logo {
+    font-size: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #123a7a 33%, #f56837 66%, #8aa9d6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0b2349;
+  }
+
+  &__animation-block {
+    width: 75px;
+    height: 75px;
+  }
+
+  &__logo img {
+    margin-top: 15px;
+    width: 75px;
+    height: 75px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__search {
+  }
+
+  &__signOut {
+    text-align: center;
+
+    color: rgb(190, 192, 194);
     font-size: 26px;
-    color: #fff;
-    font-weight: bold;
-    z-index: 300;
-
-    &__container {
-        max-width: 1140px;
-        margin: 0 auto;    
-        height: 100%;
-    }
-    &__wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    }
-    &__logo {
-        cursor: pointer;
-    }
-
-    &__logo img{
-        margin-top: 15px;
-        width: 75px;
-        height: 75px;
-    }
-
-    &__body {
-        display: flex;
-        cursor: pointer;
-    }
-
-    &__signIn {
-        margin-right: 50px;
-    }
-    &__signUp:hover{
-        transition: 0.5s ease;
-        color: #444;
-    }
-    &__signIn:hover{
-        transition: 0.5s ease;
-        color: #444;
-    }
+  }
+  &__signOut:hover {
+    transition: 0.5s ease;
+    color: #f56837;
+  }
 }
-
-
-.user__avatar img { 
+.user__avatar {
+  img {
     z-index: 1000;
-    margin: 0 20px;
-    width: 28px;
-    height: 28px;
+    margin: 0px 20px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+  }
 }
+.user__default-user {
+  margin: 0px 20px;
+
+  border-radius: 50%;
+  padding: 7px 10px;
+  i {
+    font-size: 26px;
+    color: rgb(190, 192, 194);
+  }
+}
+.user__default-user:hover {
+  transition: 0.5s ease;
+
+  i {
+    transition: 0.5s ease;
+    color: #f56837;
+  }
+}
+
+
+.navbar__search {
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 18px;
+  }
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  input[type="search"] {
+    background:#212d45  url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+   
+    padding: 2px 10px 2px 32px;
+    width: 100px;
+
+    border-radius: 10em;
+    transition: all 0.5s;
+  }
+  input[type="search"]:focus {
+    width: 220px;
+    background-color: #212d45;
+    border-color: #f56837;
+    box-shadow: 0 0 5px #f56837;
+  }
+
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+}
+

@@ -37,7 +37,7 @@ export const Registration = () => {
           <div className="registration__body">
             <div className="registration__title">
               <i class="fab fa-cloudversify"></i>
-              <span> we are always glad for a new user</span>
+              <span>we are always glad to welcome a new user</span>
             </div>
             <div className="registration__email">
               <Input
