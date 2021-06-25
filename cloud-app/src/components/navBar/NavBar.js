@@ -4,9 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../redux/reducers/userReducer";
 import { NavLink } from "react-router-dom";
 
-import { BackgroundAnimation } from "../Elements/BackgroundAnimation";
-import Logo from "../../assets/img/navBar/cloudLogo.png";
-
 import { getFiles, searchFiles } from "../../redux/actions/file";
 import { showLoader } from "../../redux/reducers/appReducer";
 

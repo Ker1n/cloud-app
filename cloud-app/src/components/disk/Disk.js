@@ -14,6 +14,7 @@ import { Uploader } from "./Uploader/Uploader";
 import { Loader } from "../Elements/Loader/Loader";
 import { BackgroundAnimation } from "../Elements/BackgroundAnimation";
 
+import Test from './../../assets/img/file/accessories-ebook-reader.ico'
 
 export const Disk = () => {
   const dispatch = useDispatch();
@@ -97,6 +98,7 @@ export const Disk = () => {
               </div>
             </div>
             <div className="disk-header__left-row">
+          
               <div className="left-row__select-sort">
                 <select
                   value={sort}

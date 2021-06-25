@@ -16,6 +16,7 @@
   &__name {
     cursor: pointer;
     overflow: hidden;
+    padding: 5px 0px;
   }
 
   &__date {
@@ -54,6 +55,10 @@
   &:hover {
     transition: 0.5s ease;
     background-color: rgba($color: #212d45, $alpha: 0.5);
+  }
+  img {
+    width: 50px;
+    height: 50px;
   }
 }
 
