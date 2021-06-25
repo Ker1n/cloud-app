@@ -1,42 +1,44 @@
 .upload-file {
+  background-color: #0f1624;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 5px 10px;
 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+  }
 
-    background-color: yellow;
+  &__name {
+    font-size: 16px;
+  }
+
+  &__progress-bar {
+    height: 1rem;
     border-radius: 8px;
-    margin: 35px 0;
-    padding: 5px 10px;
-    
-    &__header {
-        display: flex;
-        justify-content: space-between;
-    }
+    background-color: #212d45;
+    margin: 10px 0px 15px;
+    position: relative;
+  }
 
-    &__name {
-    }
+  &__upload-bar {
+    background-color: #f56837;
+    width: 0;
+    height: 100%;
+    border-radius: 8px;
+  }
 
-    &__remove {
-    }
-
-    &__progress-bar {
-        height: 1rem;
-        border-radius: 8px;
-        background-color: green;
-        margin: 3px 0px;
-    }
-
-    &__upload-bar {
-        background-color: purple;
-        width: 0;
-        height: 100%;
-        border-radius: 8px;
-
-    }
-
-    &__percent {
-        position: absolute;
-        color: red;
-        left:50%;
-       
-
-    }
+  &__percent {
+    position: absolute;
+    color: rgb(190, 192, 194);
+    top: -2px;
+    left: 45%;
+    font-size: 18px;
+  }
+}
+.close-element {
+  color: #212d45;
+  font-size: 24px;
 }

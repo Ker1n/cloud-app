@@ -1,24 +1,19 @@
 import React from "react";
+import "./Disk.scss";
+
 import { useDispatch, useSelector } from "react-redux";
+
+import { setCurrentDir, setPopupDisplay,} from "../../redux/reducers/fileReducer";
+import { setFilesView } from "../../redux/reducers/appReducer";
 import { getFiles, uploadFile } from "../../redux/actions/file";
 
+import { NavBar } from "../navBar/NavBar";
 import { FileList } from "./FileList/FileList";
 import { Popup } from "./Popup/Popup";
 import { Uploader } from "./Uploader/Uploader";
 import { Loader } from "../Elements/Loader/Loader";
 import { BackgroundAnimation } from "../Elements/BackgroundAnimation";
 
-import Back from "../../assets/img/disk/iconfinder_4829864_arrow_back_left_icon_512px.png";
-import NewFolder from "../../assets/img/disk/PinClipart.com_folder-clipart-black-and_530330.png";
-
-import "./Disk.scss";
-import {
-  setCurrentDir,
-  setPopupDisplay,
-} from "../../redux/reducers/fileReducer";
-import { setFilesView } from "../../redux/reducers/appReducer";
-
-import { NavBar } from "../navBar/NavBar";
 
 export const Disk = () => {
   const dispatch = useDispatch();

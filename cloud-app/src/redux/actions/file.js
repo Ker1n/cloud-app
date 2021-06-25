@@ -30,7 +30,9 @@ export function getFiles (dirId, sort) {
         } catch (error) {
             console.log(error.response.data.message);
         } finally { 
+            setTimeout(()=> { 
                 dispatch(hideLoader());
+            },500)
         }
     }
 }
@@ -135,7 +137,9 @@ export function searchFiles (search) {
         } catch (error) {
             console.log("search file", error);
         } finally { 
-            dispatch(hideLoader())
+            setTimeout(()=> { 
+                dispatch(hideLoader());
+            },500)
         }
     }
 }

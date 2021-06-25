@@ -40,7 +40,9 @@ export const NavBar = () => {
       <div className="navbar__container">
         <div className="navbar__wrapper">
           <div className="navbar__logo">
-            <i className="fab fa-cloudversify"></i>
+            <NavLink to="/">
+              <i className="fab fa-cloudversify"></i>
+            </NavLink>
           </div>
           <div className="navbar__body">
             <div className="navbar__search">

@@ -1,0 +1,114 @@
+.profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    &__wrapper { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__avatar {
+        width: 100px;
+        height: 100px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        margin-bottom: 20px;
+        img{
+            background: no-repeat center center;
+            background-size: contain;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    &__default-avatar { 
+        font-size: 56px;
+    }
+    &__buttons {
+        margin: 20px 0px 30px;
+        display: flex;
+        width: 200px;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 28px;
+    }
+
+    &__delete-photo {
+        cursor: pointer;
+        &:hover { 
+            transition: 0.5s ease;
+            color: #f56837;
+        }
+    }
+
+    &__upload-photo {
+        label { 
+            
+            cursor: pointer;
+            &:hover {
+                transition: 0.5s ease;
+                color: #f56837;
+            }
+        }
+        input {
+            display: none;
+        }
+    }
+
+    &__change-name {
+    }
+
+    &__change-password {
+        
+    }
+
+   
+}
+
+.change-password__val1 { 
+    margin: 40px 0px;
+}
+.change-password__val2 { 
+    margin: 0px 0px 0px 0px;
+}
+
+.user {
+
+    &__default-user {
+
+    }
+}
+.profile__bg-animation{ 
+    width: 520px;
+    height: 520px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+.profile__btn { 
+    font-size: 10px;
+        align-self: center;
+
+}
+
+.profile__logo {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #123a7a 33%, #f56837 66%, #d68ad2) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0b2349;
+}

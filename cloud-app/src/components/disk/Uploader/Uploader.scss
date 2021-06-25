@@ -1,24 +1,103 @@
-.uploader { 
-    height: 300px;
-    width: 300px;
-    position: fixed;
-    background-color: #932198;
-    bottom: 20px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 12px;
-    overflow-y: auto;
+.uploader {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  background: #212d45;
+  z-index: 1000;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
 
-    &__header { 
-        display: flex;
-        justify-content: space-between;
-    }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
-    &__title{
-        color: blue;
-    }
-    &__btn { 
-        color: blue;
-        background-color: #973123;
-    }
+.uploader::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+}
+
+.uploader::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #f56837,
+    33%,
+    #a84e30 66%,
+    rgb(15, 22, 36)
+  );
+}
+
+.uploader::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+
+  background-color: rgb(15, 22, 36);
+}
+
+.close-btn {
+  margin-top: 15px;
+}
+
+.spinner {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
+.spinner .ball {
+  width: 20px;
+  height: 20px;
+  background-color: #f56837;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+p {
+  color: rgb(190, 192, 194);
+  margin-top: 5px;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+@-webkit-keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
 }
