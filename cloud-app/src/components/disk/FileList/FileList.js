@@ -34,7 +34,7 @@ export const FileList = () => {
                         {files.map(file => (
                             <CSSTransition
                              key={file._id} 
-                             timeout={1000}
+                             timeout={500}
                              classNames={'file'}
                              >
                                 <File file={file}  />
@@ -54,7 +54,7 @@ export const FileList = () => {
                     <CSSTransition
                      key={file._id} 
                      timeout={1000}
-                     classNames={'file-plate'}
+                     classNames={'plates'}
                      >
                         <File file={file}  />
                     </CSSTransition>

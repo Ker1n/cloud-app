@@ -1,93 +1,102 @@
 .file {
-    position: relative;
-    margin: 20px 0px;
-    padding: 0px 0px 3px 0px ;
-    display: grid;
-    grid-template-columns: 1fr 4fr 2fr repeat(4, 1fr);
-    align-items: center;
-    z-index: 100;
-   
-    &__image {
-        justify-content: center;
-        cursor: pointer;
-    }
+  position: relative;
+  margin: 20px 0px;
+  padding: 0px 0px 3px 0px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr repeat(4, 1fr);
+  align-items: center;
 
-    &__name {
-        cursor: pointer;
-        overflow: hidden;
-    }
+  z-index: 100;
 
-    &__date {
-        grid-column-start: 3;
-        justify-content: center;
-    }
+  &__image {
+    justify-content: center;
+    cursor: pointer;
+  }
 
-    &__size {
-        grid-column-start: 4;
-        text-align: center;
-        justify-content: center;
-    }
-    &__download, &__delete, &__config i { 
-        cursor: pointer;
-        font-size: 22px;
-        &:hover { 
-            transition: 0.5s ease;
-            color: #f56837;
-        }
-    }
+  &__name {
+    cursor: pointer;
+    overflow: hidden;
+  }
 
-    &__download { 
-        text-align: right;
-        grid-column-start: 5;
+  &__date {
+    grid-column-start: 3;
+    justify-content: center;
+  }
+
+  &__size {
+    grid-column-start: 4;
+    text-align: center;
+    justify-content: center;
+  }
+  &__download,
+  &__delete,
+  &__config i {
+    cursor: pointer;
+    font-size: 22px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
     }
-    &__delete { 
-        text-align: center;
-        grid-column-start: 6;
-        
-    }
-    &__config{ 
-        text-align: start;
-        grid-column-start: 7;
-    }
-    &:hover { 
-        transition: 0.5s ease;
-        background-color: rgba($color: #212d45, $alpha: 0.5);
-    }
+  }
+
+  &__download {
+    text-align: right;
+    grid-column-start: 5;
+  }
+  &__delete {
+    text-align: center;
+    grid-column-start: 6;
+  }
+  &__config {
+    text-align: start;
+    grid-column-start: 7;
+  }
+  &:hover {
+    transition: 0.5s ease;
+    background-color: rgba($color: #212d45, $alpha: 0.5);
+  }
 }
 
 .file-plate {
-    flex: 0 0 120px;
-    display: flex;
-    flex-direction: column;
-   align-items: center;
- 
-    max-width: 100px;
-    margin: 0px 30px;
-    &__image {
-        height: 80px;
-        width: 80px;
-        cursor: pointer;
-    }
+  flex: 0 0 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 30px;
+  text-align: center;
+  &__image {
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+  }
 
-    &__name {
-        
-      width: 100px !important;
-       
+  &__name {
+    display: block !important;
+    max-width: 120px;
+    align-self: center !important;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 10px 0px 0px 0px;
+    word-wrap: break-word;
+  }
+  &__buttons-row {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+  }
+  &__download,
+  &__delete,
+  &__config i {
+    cursor: pointer;
+    font-size: 22px;
+    &:hover {
+      transition: 0.5s ease;
+      color: #f56837;
     }
-    &__buttons-row{
-        display: flex;
-        justify-content: space-between ;
-        height: 50px;
-    }
-    &__download, &__delete, &__config i { 
-        cursor: pointer;
-        font-size: 22px;
-        &:hover { 
-            transition: 0.5s ease;
-            color: #f56837;
-        }
-    }
-    &__delete { 
-        margin: 0px 15px;
-    }
+  }
+  &__delete {
+    margin: 0px 15px;
+  }
 }

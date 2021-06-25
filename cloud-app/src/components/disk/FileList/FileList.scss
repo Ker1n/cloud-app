@@ -1,5 +1,6 @@
 .fileList {
     margin: 20px 0px;
+    z-index: 100;
     &__header {
         display: grid;
         grid-template-columns: 1fr 4fr 2fr repeat(4, 1fr);
@@ -18,11 +19,16 @@
       text-align: center;
         grid-column-start: 4;
     }
+    &__body div{ 
+      transition: 0.5s ease;
+    }
 }
   .files-plates__wrapper div { 
+    z-index: 100;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    transition: 0.5s ease;
   }
 
 
@@ -57,18 +63,33 @@
     }
   }
 
+  .plates-enter-active {
+    animation: plates-enter 500ms forwards;
+  }
   
-.file-plate-enter-active {
-  animation: file-plate-enter 500ms forwards;
-}
+  @keyframes plates-enter {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-@keyframes file-plate-enter {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
+
+.plates-exit-active {
+    animation: plates-exit 500ms forwards;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  
+  @keyframes plates-exit {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
   }
-}

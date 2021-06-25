@@ -6,17 +6,26 @@ import { useDispatch, useSelector } from "react-redux";
 
 import DirImage from "../../../../assets/img/disk/icons8-documents-folder-40.png";
 import FileImage from "../../../../assets/img/disk/icons8-file-48.png";
-import {
-  pushToStack,
-  setCurrentDir,
-} from "../../../../redux/reducers/fileReducer";
+import {pushToStack, setCurrentDir,} from "../../../../redux/reducers/fileReducer";
 import { downloadFile, deleteFile } from "../../../../redux/actions/file";
 import { sizeFormat } from "../../../../utils/sizeFormat";
+import { validationFileName } from '../../../../utils/validationFileName';
+import { validationDirName } from "../../../../utils/validatiorDirName"; 
 
 export const File = ({ file }) => {
   const dispatch = useDispatch();
   const { currentDir } = useSelector((state) => state.files);
   const { view } = useSelector((state) => state.app);
+
+  let fileName = file.name;
+
+  if(file.name.length >= 18) { 
+    if(file.type === 'dir') { 
+      fileName = validationDirName(file.name, 18)
+    } else { 
+      fileName = validationFileName(file.name, 18)
+    }
+  }
 
   const openDirHandler = (file) => {
     if (file.type === "dir") {
@@ -43,7 +52,9 @@ export const File = ({ file }) => {
           alt="file"
           className="file-plate__image"
         />
-        <div className="file-plate__name">{file.name}</div>
+        <div className="file-plate__name">
+          {fileName}
+        </div>
         <div className="file-plate__buttons-row">
           {file.type !== "dir" ? (
             <div className="file-plate__download" onClick={downloadFileHandler}>
@@ -55,7 +66,7 @@ export const File = ({ file }) => {
           </div>
           <div
             className="file-plate__config"
-            onClick={() => console.log("Doesn't work yet")}
+            onClick={() => alert("not working yet")}
           >
             <i className="fas fa-cogs"></i>
           </div>
@@ -63,7 +74,6 @@ export const File = ({ file }) => {
       </div>
     );
   }
-
   if (view === "list") {
     return (
       <div className="file" onClick={() => openDirHandler(file)}>
@@ -72,7 +82,7 @@ export const File = ({ file }) => {
           alt="file"
           className="file__image"
         />
-        <div className="file__name">{file.name}</div>
+        <div className="file__name">{fileName}</div>
         <div className="file__date">
           {moment(file.date).format("MMMM Do YYYY h:mm a")}
         </div>
@@ -87,7 +97,7 @@ export const File = ({ file }) => {
         </div>
         <div
           className="file__config"
-          onClick={() => console.log("Doesn't work yet")}
+          onClick={() => alert("not working yet")}
         >
           <i className="fas fa-cogs"></i>
         </div>
