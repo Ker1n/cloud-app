@@ -44,7 +44,6 @@ export const auth = () => {
     }
 }
 
-
 export const uploadAvatar =  (file) => {
     return async dispatch => {
         try {

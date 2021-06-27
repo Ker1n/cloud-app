@@ -1,0 +1,7 @@
+{
+  "serverPort": 4004,
+  "dbUrl": "mongodb+srv://Kerinqeus:1234567890987654321@cluster0.wijcf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "secretKey": "mern-secret-key",
+  "filePath": "W:\\programing\\ulbi\\mern\\server\\files",
+  "staticPath": "W:\\programing\\ulbi\\mern\\server\\static"
+}

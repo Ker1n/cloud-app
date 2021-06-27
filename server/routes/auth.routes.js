@@ -12,7 +12,7 @@ const File = require('../models/File')
 router.post('/registration',
     [
         check('email', "Uncorrect email").isEmail(),
-        check('password', 'Password must be longer than 3 and shorter than 12').isLength({min:3, max:12})
+        check('password', 'Password must be longer than 3 and shorter than 18').isLength({min:3, max:18})
     ],
     async (req, res) => {
     try {
@@ -28,7 +28,7 @@ router.post('/registration',
         const hashPassword = await bcrypt.hash(password, 8)
         const user = new User({email, password: hashPassword})
         await user.save()
-        await fileService.createDir(new File({user:user.id, name: ''}))
+        await fileService.createDir(req, new File({user:user.id, name: ''}))
         res.json({message: "User was created"})
     } catch (e) {
         console.log(e)
